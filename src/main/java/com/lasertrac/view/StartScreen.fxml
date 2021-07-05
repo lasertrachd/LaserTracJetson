@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="rootPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lasertrac.controller.StartScreenController">
+   <children>
+      <VBox fx:id="vBoxContainer" alignment="TOP_CENTER" layoutX="0.0" layoutY="0.0" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="893.0">
+         <children>
+            <Label fx:id="labelDeptName" alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="40.0" prefWidth="856.0" text="Integra Design Co." textAlignment="CENTER" />
+            <ImageView fx:id="imageViewLogo" fitHeight="308.0" fitWidth="492.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="50.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="labelLog" alignment="TOP_LEFT" prefHeight="178.0" prefWidth="374.0" text="Label" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

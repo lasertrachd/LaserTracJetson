@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane1" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lasertrac.controller.LiveViewController1">
+	<children>
+      <GridPane fx:id="gridPane1" gridLinesVisible="true" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="1024.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="90.0" prefWidth="100.0" />
+          
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="32.0" minHeight="0.0" percentHeight="90.0" prefHeight="32.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="82.0" minHeight="10.0" percentHeight="10.0" prefHeight="82.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+         	
+         	
+            <GridPane fx:id="leftSideControlGrid" gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="zoomInBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Zoom +" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="zoomOutBtn" alignment="CENTER_RIGHT" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Zoom -" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="dZoomBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="D-Zoom 0x" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="focusAutoManualBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Focus Auto" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="focusPlusBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Focus +" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="focusMinusBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Focus -" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="infraredBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Infrared" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="autoManualRecBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="Auto Recording" style="-fx-background-color: #303030;" text="Focus -" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="laserBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Laser" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+               </children>
+            </GridPane>
+            
+            
+            <BorderPane fx:id="currentFrameContainerPane" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         		<center>
+         			<ImageView fx:id="currentFrame" BorderPane.alignment="CENTER" />
+         		</center>
+         	</BorderPane>
+            
+            <Button fx:id="recBtn" alignment="CENTER_RIGHT" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Rec" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            
+            <GridPane fx:id="bottomSideControlGrid" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+              </rowConstraints>
+              <children>
+              		
+              		<Button fx:id="bikeSpeedBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Bike" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		<Button fx:id="carSpeedBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Car" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		<Button fx:id="truckSpeedBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Truck" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		
+              		<Button fx:id="defineSpeedBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Define Speed limit" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		
+              		<Button fx:id="camModeBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Cam Mode" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		
+              		<Button fx:id="menuBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Menu" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		<Button fx:id="soundBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Sound" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+              		
+                  <Button fx:id="snapNoHelmetBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Helmet Snap" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="snapBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Snap" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+               </children>
+            </GridPane>
+            
+            
+         </children>
+        
+        
+      </GridPane>
+   </children>
+	
+</Pane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane fx:id="rootPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="465.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lasertrac.controller.SnapshotShowController">
+   <children>
+      <GridPane fx:id="gridPaneContainer" prefHeight="465.0" prefWidth="390.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="Infinity" minHeight="10.0" percentHeight="27.0" prefHeight="159.0" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="Infinity" minHeight="10.0" percentHeight="62.0" prefHeight="248.0" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="Infinity" minHeight="10.0" percentHeight="11.0" prefHeight="58.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+         
+         <GridPane fx:id="controlContainerGridPane" GridPane.rowIndex="0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" percentHeight="35.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.rowIndex="0">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="255.0" minWidth="10.0" percentWidth="60.0" prefWidth="208.0" />
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="189.0" minWidth="10.0" percentWidth="40.0" prefWidth="182.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                    	<ImageView fx:id="numberPlateImgView" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" />
+                    	<TextField fx:id="numberPlateTextField" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                    </children>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="10.0" percentWidth="60.0" prefWidth="210.0" />
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="10.0" percentWidth="20.0" prefWidth="90.0" />
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="10.0" percentWidth="20.0" prefWidth="90.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" percentHeight="65.0" prefHeight="30.0" vgrow="ALWAYS" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="violationActsComboBox" maxHeight="Infinity" maxWidth="Infinity" prefHeight="26.0" prefWidth="157.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button fx:id="addViolationBtn" maxHeight="Infinity" maxWidth="Infinity" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Button fx:id="clearViolationBtn" maxHeight="Infinity" maxWidth="Infinity" text="Add" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        
+                        <Label fx:id="msgLabel" maxHeight="Infinity" maxWidth="Infinity" prefWidth="150.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  
+                  <TextArea maxHeight="Infinity" maxWidth="Infinity" prefHeight="20.0" prefWidth="390.0" GridPane.rowIndex="2" />
+                  
+               </children>
+            </GridPane>
+            
+            <ImageView fx:id="snapShotImgView" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            
+            <GridPane fx:id="gridPane2" hgap="10.0" maxHeight="Infinity" maxWidth="Infinity" vgap="5.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="10.0" prefWidth="130.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="10.0" prefWidth="130.0" />
+                <ColumnConstraints maxWidth="Infinity" minWidth="57.0" prefWidth="130.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="createChallanBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="Create Challan" GridPane.columnIndex="0" />
+                  <Button fx:id="uploadChallanBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="Upload" GridPane.columnIndex="1" />
+                  <Button fx:id="cancelBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="2" />
+               </children>
+               <padding>
+                  <Insets bottom="2.0" />
+               </padding>
+            </GridPane>
+            
+            
+         </children>
+      </GridPane>
+   </children>
+	
+</Pane>

@@ -1,0 +1,17 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.windowTitleBar{
+	
+	visibility: collapse;
+	-fx-cell-size: 0px;
+	-fx-scale-x:0;
+	-fx-scale-y:0;
+	-fx-opacity:0;
+	
+	-fx-min-height:0;
+	-fx-max-height:4;
+	-fx-pref-height:4;
+	
+
+}
+
+
