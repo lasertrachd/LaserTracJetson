@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>LasertracMaven</groupId>
-  <artifactId>LasertracMaven</artifactId>
+  <groupId>com.lasertrac</groupId>
+  <artifactId>LaserTracJetson</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
   <properties>
@@ -269,7 +269,7 @@
 		            	<addClasspath>true</addClasspath>
 		                <classpathPrefix>libs/</classpathPrefix>
 	                    <!-- give full qualified name of your main class-->
-	                      <mainClass>com.lasertrac.main.StartScreen</mainClass>
+	                      <mainClass>com.lasertrac.main.VideoPlayback</mainClass>
 	                </manifest>
 	             </archive>
 	         </configuration>
@@ -281,7 +281,7 @@
 	        <version>0.0.4</version>
 	        <configuration>
 	        <release>13</release>
-	            <mainClass>com.lasertrac.main.StartScreen</mainClass>
+	            <mainClass>com.lasertrac.main.VideoPlayback</mainClass>
 	        </configuration>
 	    </plugin>
     </plugins>
