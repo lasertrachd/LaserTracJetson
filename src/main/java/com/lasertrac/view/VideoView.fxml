@@ -1,69 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 
-<Pane fx:id="rootPane1" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #000;" 
-		xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lasertrac.controller.VideoViewController">
-	
+<Pane fx:id="rootPane" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lasertrac.controller.VideoViewController">
+
 	<children>
-      <GridPane fx:id="gridPane1" gridLinesVisible="true" maxHeight="Infinity" maxWidth="Infinity">
+      <GridPane fx:id="gridPaneParent" gridLinesVisible="true" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600.0" prefWidth="1024.0">
         <columnConstraints>
           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="90.0" prefWidth="100.0" />
           <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="32.0" minHeight="0.0" percentHeight="90.0" prefHeight="32.0" valignment="CENTER" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="82.0" minHeight="10.0" percentHeight="10.0" prefHeight="82.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="Infinity" minHeight="10.0" percentHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-         
+
+            <!-- ##image view-->
             <GridPane gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
               <columnConstraints>
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" percentHeight="80.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
-                  <Button fx:id="zoomInBtn" text="Zoom In" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" textAlignment="RIGHT" GridPane.rowIndex="0" />
-                  <Button fx:id="zoomOutBtn" text="Zoom Out"  maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false"  textAlignment="RIGHT" GridPane.rowIndex="1" />
+                   <AnchorPane fx:id="videoImageAnchor" style="-fx-background-color: #fff;" GridPane.rowIndex="0">
+                       <ImageView fx:id="videoImgView" managed="false" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #000;"
+                                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <AnchorPane.bottomAnchor>0.0</AnchorPane.bottomAnchor>
+                       </ImageView>
+                   </AnchorPane>
+
+                   <Pane style="-fx-background-color: #fff;" GridPane.rowIndex="1" />
+                   <GridPane gridLinesVisible="true" GridPane.rowIndex="2">
+                       <columnConstraints>
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="12.5" />
+                       </columnConstraints>
+                       <rowConstraints>
+                           <RowConstraints minHeight="10.0" percentHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+                       </rowConstraints>
+                       <children>
+                           <Button fx:id="playBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Play" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="0">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="pauseBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Pause" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="1">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="fastForwardBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Fast Forward" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="2">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="prevFrameBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Prev Frame" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="3">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="nextFrameBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Next Frame" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="4">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="snapShotBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="SnapShot" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="5">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="createChallanBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Create Challan" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="6">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                           <Button fx:id="frameAnprBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Frame Anpr" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="7">
+                               <font>
+                                   <Font size="14.0" />
+                               </font></Button>
+                       </children>
+
+                   </GridPane>
                </children>
             </GridPane>
-            
-            <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+            <!-- right side video list             -->
+            <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
               <columnConstraints>
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" percentHeight="75.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="ALWAYS" />
               </rowConstraints>
+                <children>
+                    <Button fx:id="calenderBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="18-07-2021" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="0">
+                        <font>
+                            <Font size="14.0" />
+                        </font></Button>
+
+                    <ListView fx:id="videosListView" maxHeight="Infinity" maxWidth="Infinity" GridPane.rowIndex="1"> </ListView>
+                    <Button fx:id="menuBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Menu" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="2" />
+
+                </children>
             </GridPane>
-            
-            
+
+
          </children>
-        
-        
+
+
       </GridPane>
    </children>
 </Pane>
-
