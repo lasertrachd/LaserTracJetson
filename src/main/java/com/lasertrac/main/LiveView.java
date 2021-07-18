@@ -1,6 +1,6 @@
 package com.lasertrac.main;
 
-import com.lasertrac.controller.LiveViewController;
+import com.lasertrac.controller.LiveViewController1;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -40,7 +40,7 @@ public class LiveView extends Application{
 			primaryStage.setFullScreenExitHint("");
 			
 			// set the proper behavior on closing the application
-			LiveViewController controller = loader.getController();
+			LiveViewController1 controller = loader.getController();
 			primaryStage.setOnCloseRequest((new EventHandler<WindowEvent>() {
 				public void handle(WindowEvent we)
 				{

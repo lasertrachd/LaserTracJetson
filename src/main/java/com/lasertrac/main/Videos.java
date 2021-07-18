@@ -16,7 +16,7 @@ public class Videos extends Application {
         try{
 
             // load the FXML resource
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/lasertrac/view/VideoView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/lasertrac/view/VideoPlayer.fxml"));
             // store the root element so that the controllers can use it
             Pane rootElement = (Pane) loader.load();
             // create and style a scene

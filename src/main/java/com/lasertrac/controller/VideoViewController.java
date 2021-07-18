@@ -64,13 +64,13 @@ public class VideoViewController {
 	public void initialize()
 	{
 
-//		gridPaneParent.prefWidthProperty().bind(rootPane.widthProperty());
-//		gridPaneParent.prefHeightProperty().bind(rootPane.heightProperty());
-//
-//		videoImgView.fitWidthProperty().bind(videoImageAnchor.widthProperty());
-//		videoImgView.fitHeightProperty().bind(videoImageAnchor.heightProperty());
-//
-//		setListeners();
+		gridPaneParent.prefWidthProperty().bind(rootPane.widthProperty());
+		gridPaneParent.prefHeightProperty().bind(rootPane.heightProperty());
+
+		videoImgView.fitWidthProperty().bind(videoImageAnchor.widthProperty());
+		videoImgView.fitHeightProperty().bind(videoImageAnchor.heightProperty());
+
+		setListeners();
 		
 
 		
