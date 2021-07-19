@@ -19,7 +19,7 @@
             </rowConstraints>
             <children>
 
-                <!-- ##image view-->
+                <!-- left side image view-->
                 <GridPane gridLinesVisible="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
                     <columnConstraints>
                         <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
@@ -106,8 +106,12 @@
                             <font>
                                 <Font size="14.0" />
                             </font></Button>
+                        <Pane fx:id="videoListViewPane" GridPane.rowIndex="1" maxHeight="Infinity"  >
+                            <children>
+<!--                                <ListView fx:id="videosListView" maxHeight="Infinity" maxWidth="Infinity" > </ListView>-->
+                            </children>
+                        </Pane>
 
-                        <ListView fx:id="videosListView" maxHeight="Infinity" maxWidth="Infinity" GridPane.rowIndex="1"> </ListView>
                         <Button fx:id="menuBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" style="-fx-background-color: #303030;" text="Menu" textAlignment="RIGHT" textFill="WHITE" GridPane.rowIndex="2" />
 
                     </children>

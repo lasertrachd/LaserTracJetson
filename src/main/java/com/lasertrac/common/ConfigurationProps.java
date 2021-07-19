@@ -8,6 +8,7 @@ public class ConfigurationProps {
 	public  static  final String config_file_camera_presets = config_dir+"/CameraPresets.ini";
 	
 	public  static  final String video_dir = config_dir+"/videos";
+	public  static  final String video_thumb_dir = config_dir+"/videos_thumb";
 	public  static  final String snap_dir = config_dir+"/snapshots";
 	public  static  final String pdf_dir = config_dir+"/pdfs";
 	

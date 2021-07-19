@@ -9,7 +9,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class Videos extends Application {
+public class VideoPlayer extends Application {
 
     @Override
     public void start(Stage primaryStage) {
